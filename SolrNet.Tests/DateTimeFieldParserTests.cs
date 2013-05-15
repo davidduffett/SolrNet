@@ -36,11 +36,11 @@ namespace SolrNet.Tests {
 
         private static readonly IEnumerable<KeyValuePair<string, DateTime>> parsedDates =
             new[] {
-                KV.Create("1-01-01T00:00:00Z", new DateTime(1, 1, 1)),
-                KV.Create("2004-11-01T00:00:00Z", new DateTime(2004, 11, 1)),
-                KV.Create("2012-05-10T14:17:23.684Z", new DateTime(2012, 5, 10, 14, 17, 23, 684)),
-                KV.Create("2012-05-10T14:17:23.68Z", new DateTime(2012, 5, 10, 14, 17, 23, 680)),
-                KV.Create("2012-05-10T14:17:23.6Z", new DateTime(2012, 5, 10, 14, 17, 23, 600)),
+                KV.Create("1-01-01T00:00:00Z", new DateTime(1, 1, 1, 0, 0, 0, DateTimeKind.Utc)),
+                KV.Create("2004-11-01T00:00:00Z", new DateTime(2004, 11, 1, 0, 0, 0, DateTimeKind.Utc)),
+                KV.Create("2012-05-10T14:17:23.684Z", new DateTime(2012, 5, 10, 14, 17, 23, 684, DateTimeKind.Utc)),
+                KV.Create("2012-05-10T14:17:23.68Z", new DateTime(2012, 5, 10, 14, 17, 23, 680, DateTimeKind.Utc)),
+                KV.Create("2012-05-10T14:17:23.6Z", new DateTime(2012, 5, 10, 14, 17, 23, 600, DateTimeKind.Utc)),
             };
 
         [StaticTestFactory]
